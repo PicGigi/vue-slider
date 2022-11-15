@@ -25,7 +25,7 @@
         <div id="left-slider">
 
             <div v-for="(objImg, indexImg) in images">
-                <img :src="objImg.image" v-show="indexImg === currentImg" class="left-slider-img">
+                <img :src="`img/${objImg.image}`" v-show="indexImg === currentImg" class="left-slider-img">
             </div>
 
             <div v-for="(objInfo, indexInfo) in images" class="info" v-show="indexInfo === currentImg">
@@ -36,9 +36,12 @@
         </div>
 
         <div id="right-slider">
+            <div v-for="(objImg, indexImg) in images" class="right-slider-img" :class="{selected: indexImg === currentImg}">
+                <img :src="`img/${objImg.image}`">
+            </div>
 
             <div class="buttons">
-                <i class="bi bi-caret-up-fill" @click="previuos"></i>
+                <i class="bi bi-caret-up-fill" @click="previous"></i>
                 <i class="bi bi-caret-down-fill" @click="next"></i>
             </div>
 

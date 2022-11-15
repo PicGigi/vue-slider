@@ -35,17 +35,17 @@ new Vue({
     methods: {
 
         next() {
-            currentImg++;
-            if(currentImg === (images.length)){
-                currentImg = 0;
+            this.currentImg++;
+            if(this.currentImg === (this.images.length)){
+                this.currentImg = 0;
             }
         },
 
         previous() {
-            if(currentImg === 0){
-                currentImg = images.length;
+            if(this.currentImg === 0){
+                this.currentImg = this.images.length;
             }
-            currentImg--;
+            this.currentImg--;
         }
     },
 })

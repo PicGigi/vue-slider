@@ -65,6 +65,11 @@ height: 20%;
 opacity: 50%;
 }
 
+.right-slider-img img{
+    height: 100%;
+    width: 100%;
+}
+
 .active{
     visibility: visible;
 }
